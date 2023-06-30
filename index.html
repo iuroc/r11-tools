@@ -36,7 +36,7 @@
             const regexp = new RegExp('<!--.*', 'g')
             code = code.replace(regexp, '')
             // 清除前置和后置空白
-            code = code.replace(/(^\s*)|(\s*$)/gm, '')
+            code = code.replace(/^\s*/gm, '').replace(/\s*$/gm, '')
             // 清除空行
             code = code.replace(/\n{2,}/g, '\n')
             input.value = code
